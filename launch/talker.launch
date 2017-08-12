@@ -1,0 +1,11 @@
+<launch>
+        <node name="servoNode" pkg="rosserial_python" type="serial_node.py">
+                 <param name="port" value="/dev/ttyACM0"/>
+        </node>
+        <node name="rfidNode" pkg="rosserial_python" type="serial_node.py">
+                <param name="port" value="/dev/ttyACM1" />
+        </node>
+
+        <node name="talker" pkg="pi_robot" type="listener.py"/>
+</launch>
+
